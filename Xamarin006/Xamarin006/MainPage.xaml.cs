@@ -177,7 +177,7 @@ namespace Xamarin006
                 //Userテーブルの名前列をLabelに書き出す
                 layout.Children.Add(new Label { Text = user.Name });
             }
-            Content = layout;
+            //Content = layout;
         }
 
         public void InsertClicked(object sender, EventArgs e)
