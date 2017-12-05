@@ -18,7 +18,7 @@ namespace Xamarin006
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            // Handle when your app startsfg
         }
 
         protected override void OnSleep()
