@@ -177,7 +177,7 @@ namespace Xamarin006
         public void OrderClicked(object sender, EventArgs e)
         {
             //Userテーブルの行データを取得
-            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
+            var query = UserModel.orderUser(); //中身はSELECT * FROM [User]
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             foreach (var user in query)
             {
