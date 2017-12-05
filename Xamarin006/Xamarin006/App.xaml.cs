@@ -9,11 +9,14 @@ namespace Xamarin006
 {
     public partial class App : Application
     {
-        public App()
+        public App(string dbPath)
         {
+            //AppのdbPathに引数のパスを設定
+            App.dbPath = dbPath;
+
             InitializeComponent();
 
-            MainPage = new Xamarin006.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
