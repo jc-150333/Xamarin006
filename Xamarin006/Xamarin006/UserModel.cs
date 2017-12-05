@@ -92,7 +92,7 @@ namespace Xamarin006
                 try
                 {
                     //データベースに指定したSQLを発行します
-                    return db.Query<UserModel>("SELECT * FROM [User] WHERE [Id} = 1 ORDER BY [Id] DESC");
+                    return db.Query<UserModel>("SELECT * FROM [User] ORDER BY [Id] DESC");
 
                 }
                 catch (Exception e)
