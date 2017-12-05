@@ -104,6 +104,8 @@ namespace Xamarin006
             }
         }
 
+
+
         /*******************サーチメソッド*************************************
         public IEnumerable<UserModel> serchUser()
         {

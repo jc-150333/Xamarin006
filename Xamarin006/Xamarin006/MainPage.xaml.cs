@@ -98,6 +98,21 @@ namespace Xamarin006
 
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
+            //Userテーブルに適当なデータを追加する
+            UserModel.insertUser(1, "鈴木");
+            UserModel.insertUser(2, "田中");
+            UserModel.insertUser(3, "斎藤");
+
+            //Userテーブルの行データを取得
+            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
+            layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            foreach (var user in query)
+            {
+                //Userテーブルの名前列をLabelに書き出す
+                layout.Children.Add(new Label { Text = user.Name });
+            }
+            Content = layout;
+
             //-------------------------------インサートボタン-------------------------------
             var Insert = new Button
             {
@@ -138,7 +153,7 @@ namespace Xamarin006
             layout.Children.Add(Serch);
             Serch.Clicked += SerchClicked;*/
 
-            //--------------------------------オーダーボタン------------------------------
+            /*--------------------------------オーダーボタン------------------------------
             var Order = new Button
             {
                 WidthRequest = 60,
@@ -146,7 +161,7 @@ namespace Xamarin006
                 TextColor = Color.Black,
             };
             layout.Children.Add(Order);
-            Order.Clicked += OrderClicked;
+            Order.Clicked += OrderClicked;*/
 
 
             Content = layout;
