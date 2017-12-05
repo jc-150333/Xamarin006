@@ -9,6 +9,9 @@ namespace Xamarin006
 {
     public partial class App : Application
     {
+        //データベースのパスを格納
+        public static string dbPath;
+
         public App(string dbPath)
         {
             //AppのdbPathに引数のパスを設定
