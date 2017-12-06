@@ -97,8 +97,25 @@ namespace Xamarin006
             InitializeComponent();
 
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            //var layout = new ListView { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
 
-            //-------------------------------インサートボタン-------------------------------
+            //-------------------------------エントリー-------------------------------
+            //文字入力
+            var entry = new Entry
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand
+            };
+            //追加
+            var buttonAdd = new Button
+            {
+                WidthRequest = 60,
+                TextColor = Color.White,
+                Text = "Add"
+            };
+            layout.Children.Add(buttonAdd);
+            buttonAdd.Clicked += InsertClicked;
+
+            /*-------------------------------インサートボタン-------------------------------
             var Insert = new Button
             {
                 WidthRequest = 60,
