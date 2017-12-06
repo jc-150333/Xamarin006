@@ -29,7 +29,7 @@ namespace Xamarin005
             layout.Children.Add(Insert);
             Insert.Clicked += InsertClicked;
 
-            /*--------------------------------デリートボタン------------------------------
+            /*--------------------------------デリートボタン--------------------------------
             var Delete = new Button
             {
                 WidthRequest = 60,
